@@ -136,6 +136,10 @@ table, tr, td{
     margin-left: 88%;
 }
 
+#adminSort{
+    margin-left: 88%;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -184,6 +188,19 @@ table, tr, td{
   
   .close:hover,
   .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .editClose {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .editClose:hover,
+  .editClose:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

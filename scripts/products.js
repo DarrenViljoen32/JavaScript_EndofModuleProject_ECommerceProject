@@ -30,6 +30,7 @@ if(!products || !Array.isArray(products)){
         bought.push(selectedProduct)
         localStorage.setItem('bought',JSON.stringify(bought))
     }
+
     mainContent.addEventListener('click',function (){
         if (event.target.hasAttribute('data-add')){
             add(event.target.getAttribute(`data-index`));
@@ -44,7 +45,7 @@ function displayProducts(productArray){
             <div id="spinner" class="spinner-border text-primary" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
-        `;
+        `
     } else {
         // Hide spinner and display content when array is not empty
         mainContent.innerHTML = productArray.map(function displayArray(item, index) {
@@ -65,7 +66,6 @@ function displayProducts(productArray){
         }).join('');
     }
 }
-
 
  //search button
 let searchBtn = document.querySelector('#searchBtn')
@@ -96,36 +96,21 @@ searchBtn.addEventListener("click", ()=>{
             `}).join('');
         }
 });
+
 //sort button
-let sortBtn = document.querySelector('#sort')
-//sort button function
+let sortBtn = document.querySelector('#sort');
+let j = false;
 sortBtn.addEventListener("click", ()=>{
-     let sorted = JSON.parse(localStorage.getItem("products"))?.sort((a, b) =>{
-      if(a.price < b.price ) return -1;
-      if(a.price > b.price ) return 1;
-      return 0; // If the price are 0 return eqaul
-    });
-    // Assign the innerHTML value after sorting the items
-    console.log(sorted);
-    mainContent.innerHTML = sorted.map(function displayArray(item,index){
-        return`
-            <div class='card col-4'>
-                <img src='${item.prodImage}'>
-                <div class='container'>
-                    <h2>${item.name}</h2>
-                    <p>${item.description}</p>
-                    <p>R${item.price}</p>
-                </div>
-                <button data-index='${index}' data-add>Add To Cart</button>
-                <br>
-                <input id='quantity-${index}' class='quantity' placeholder='Enter Quantity' data-quan>
-                <br>
-            </div>
-        `}).join('');
-    });
+    if(!j){
+        products.sort((a, b) => b.price - a.price);
+        sortBtn.textContent = "Sorted by highest price";
+        j = true;
+    }else{
+        products.sort((a, b) => a.price - b.price);
+        sortBtn.textContent = "Sorted by lowest price";
+        j = false;
+    }
+    displayProducts(products);
+});
 
-    document.querySelector(`#spinner`).style.display = 'block';
-
-    updateMainContent(sorted);
-
-    updateMainContent(searchResults);
+document.querySelector(`#spinner`).style.display = 'block';
