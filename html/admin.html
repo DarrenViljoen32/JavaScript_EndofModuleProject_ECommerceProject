@@ -24,14 +24,44 @@
                 <img src="https://i.postimg.cc/Gmftw9Yd/poggers.webp" alt="Logo">
             </ul>
             <ul id="navbar" class="col-9">
-                <li><a href="/index.html">Home</a></li>
+                <!-- <li><a href="/index.html">Home</a></li>
                 <li><a href="/html/aboutUs.html">About Us</a></li>
                 <li><a href="/html/products.html">Products</a></li>
                 <li><a href="/html/admin.html">Admin</a></li>
                 <li><a href="/html/checkout.html">Checkout</a></li>
-                <li><a href="/html/contactUs.html">Contact Us</a></li>
+                <li><a href="/html/contactUs.html">Contact Us</a></li> -->
+
+                <div class="offcanvas offcanvas-end" id="demo">
+                    <div class="offcanvas-header">
+                        <h1 class="offcanvas-title">Navigation</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <br>
+                            <li><a href="/html/aboutUs.html">About Us</a></li>
+                            <br>
+                            <li><a href="/html/products.html">Products</a></li>
+                            <br>
+                            <li><a href="/html/admin.html">Administration</a></li>
+                            <br>
+                            <li><a href="/html/checkout.html">Checkout</a></li>
+                            <br>
+                            <li><a href="/html/contactUs.html">Contact Us</a></li>
+                            <br>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navBtn container-fluid mt-3">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                        Navigation
+                    </button>
+                </div>
             </ul>
+            
         </nav>
+      
     </header>
     <div>
         <h1 id="heading">Administration</h1>
