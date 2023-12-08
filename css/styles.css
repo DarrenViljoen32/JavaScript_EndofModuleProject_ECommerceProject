@@ -9,8 +9,8 @@
     scroll-behavior: smooth;
   }
 body {
-    margin: 0;
-    padding-left: 0px;
+    /* margin: 0;
+    padding-left: 0px; */
     line-height: 1.5;
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
@@ -59,7 +59,7 @@ img{
   }
 
   .container {
-    max-width: 1100px;
+    max-width: 100%;
     width: 100%;
     margin: auto;
   }
@@ -85,13 +85,14 @@ img{
     text-align: center;
 }
 .logo p{
-    font-size: x-large;
+    font-size: xx-large;
     width: 200px;
     padding-top: 10px;
     padding-right: 10px;
     margin-left: 0%;
     font-family: "Koulen";
 }
+
 #nav ul{
     line-height: 0px;
     position: relative;
@@ -101,7 +102,7 @@ img{
     /* border-left: solid 1px floralwhite;
     border-right: solid 1px floralwhite; */
 }
-#nav ul li{
+/* #nav ul li{
     display: inline-block;
     margin: -9px 0.5em 0 0.5em;
     padding: 0.5em;
@@ -114,10 +115,65 @@ img{
     border: 0;
     outline: 0;
     font-size: x-large;
-}
+} */
 
 #navbar{
     margin-left: 0%;
+}
+#nav ul .navBtn{
+    font-size: x-large;
+}
+.offcanvas-header{
+    height: 23%;
+}
+.offcanvas-header .offcanvas-title{
+    color: #0F1A2D;
+}
+.offcanvas-body{
+    background-color: #0F1A2D;
+    line-height: 0px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    height: 0px;
+    text-align: center;
+}
+.offcanvas-body ul{
+    display: inline-block;
+    /* margin: -9px 0.5em 0 0.5em; */
+    padding: 0.5em;
+    border: solid 1px transparent;
+    text-align: center;
+}
+.offcanvas-body ul li{
+    display: inline-block;
+    /* margin: -9px 0.5em 0 0.5em; */
+    padding: 0.5em;
+    border: solid 1px transparent;
+    text-align: center;
+}
+.offcanvas-body ul li a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 50%;
+}
+.navBtn .btn{
+    height: 50px;
+    width: 120px;
+    margin-bottom: 5%;
+    border: solid 3px floralwhite;
+    background-color: floralwhite;
+    color: #0F1A2D;
+}
+.navBtn .btn:hover{
+    border: solid 3px floralwhite;
+    background-color: #0F1A2D;
+    color: floralwhite;
 }
 
 main{
@@ -153,12 +209,16 @@ footer {
     font-size: large;
 }
 
-.search input{
+.look{
+    margin-left: 2%;
+}
+.look #find{
     height: 50px;
     border: solid 3px #0F1A2D;
     color: #0F1A2D;
+    
 }
-.search #searchBtn{
+.look #searchBtn{
     height: 50px;
     width: 70px;
     border-radius: 0%;
@@ -167,22 +227,22 @@ footer {
     font-weight: bold;
     background-color: #0F1A2D;
 }
-.search #searchBtn:hover{
+.look #searchBtn:hover{
     border: solid 3px #0F1A2D;
     color: #0F1A2D;
     font-weight: bold;
     background-color: floralwhite;
 }
-.search #sort{
+.look #sort{
     height: 60px;
-    width: 280px;
+    width: 180px;
     border-radius: 0%;
     border: solid 3px #0F1A2D;
     color: floralwhite;
     font-weight: bold;
     background-color: #0F1A2D;
 }
-.search #sort:hover{
+.look #sort:hover{
     border: solid 3px #0F1A2D;
     color: #0F1A2D;
     font-weight: bold;
@@ -451,4 +511,181 @@ form input{
 }
 .contact-form{
     height: 100%;
+}
+
+
+/* Responsiveness */
+@media (max-width: 1080px){
+    body{
+        width: 100%;
+    }
+    #heading{
+        padding-top: 20%;
+    }
+
+    .card{
+        margin: 10px;
+        margin-left: 10px;
+        height: 30%;
+        width: 45%;
+    }
+}
+
+@media (max-width: 720px){
+    body{
+        width: 100%;
+    }
+    .navBtn .btn{
+        height: 40px;
+        width: 100px;
+        margin-bottom: 7%;
+    }
+    #heading{
+        padding-top: 55%;
+    }
+    aside img{
+        width: 150px;
+        height: 160px;
+    }
+    .card{
+        margin: 10px;
+        margin-left: 10px;
+        height: 30%;
+        width: 45%;
+    }
+    #myBtn{
+        width: 90px;
+        margin-left: 95%;
+    }
+    #adminSort{
+        width: 90px;
+        margin-left: 95%;
+    }
+    .table{
+        margin-left: 0%;
+        margin-right: 5%;
+        padding-left:  0%;
+        margin-right: 0%;
+        padding-right: 0%;
+        width: 50%;
+    }
+
+    #purchase{
+        width: 15%;
+        height: 50px;
+        margin-left: 0% ;
+    }
+    #clearAll{
+        width: 15%;
+        height: 50px;
+        margin-left: 0% ;
+    }
+}
+
+@media (max-width: 300px){
+    body{
+        text-align: center;
+    }
+    .logo img{
+     height: 80px;
+     width: 80px;
+    }
+    .logo p{
+        visibility: hidden;
+    }
+    .navBtn .btn{
+        height: 40px;
+        width: 100px;
+        margin-bottom: 18%;
+    }
+    aside{
+        display:none;
+    }
+    #heading{
+        padding-top: 70%;
+        font-size: 60px;
+    }
+    .card{
+        margin: 5px;
+        height: 20%;
+        width: 100%;
+    }
+    /* .card #cardDesc{
+        
+    } */
+    .card img{
+        align-self: center;
+        width: 200px;
+        height: 250px;
+        margin-top: 5px;
+    }
+    .card #cartBtn{
+        width: 80%;
+        margin-left: 10% ;
+        border: solid 3px #0F1A2D;
+        color: floralwhite;
+        font-weight: bold;
+        background-color: #0F1A2D;
+    }
+    .card .quantity{
+        width:  80%;
+        margin-left: 10%;
+        border: solid 3px #0F1A2D;
+        color: #0F1A2D;
+    
+    }
+    .container{
+        width: 100%;
+        padding: 2px 16px;
+    }
+    .card, .container, button{
+        margin-top: 50px;
+    }
+    footer{
+        width: 100%;
+        margin-right: 0%;
+    }
+    .contact-info-item{
+        /* visibility: hidden; */
+        padding-right: 20%;
+    }
+    table{
+        margin-left: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-right: 0%;
+    }
+    table, tr, th, td, thead{
+        display: block;
+    }
+    th{
+        visibility: hidden;
+        display: none;
+    }
+
+    td:nth-of-type(1)::before{content: "";}
+    td:nth-of-type(2)::before{content: "";}
+    td:nth-of-type(3)::before{content: "";}
+    td:nth-of-type(4)::before{content: "";}
+    td:nth-of-type(5)::before{content: "";}
+    td:nth-of-type(6)::before{content: "";}
+
+    #purchase{
+        width: 35%;
+        height: 50px;
+        margin-left: 0% ;
+    }
+    #clearAll{
+        width: 35%;
+        height: 50px;
+        margin-left: 0% ;
+    }
+    #myBtn{
+        width: 90px;
+        margin-left: 30%;
+    }
+    #adminSort{
+        width: 90px;
+        margin-left: 30%;
+    }
 }
