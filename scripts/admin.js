@@ -25,7 +25,7 @@ if(!products.length){
     //objects with id, name, description, price, url, and amount
     let product01 = new MyObjectConstructor(1, `Grand Theft Auto V`, `Grand Theft Auto V is a 2013 action-adventure game set within the fictional state of San Andreas, the single-player story follows three protagonists and their attempts to commit heists while under pressure from a corrupt government agency and powerful criminals.`, 700, `https://i.postimg.cc/nr2VFz60/Grand-Theft-Auto-V.png`, 0);
 
-    let product02 = new MyObjectConstructor(2, `Red Dead Redemption 2`, `Red Dead Redemption 2 is a western action-adventure game set in an open world environment and played from a third-person perspective, featuring single-player and online multiplayer components. Relive the final years of the Outlaw in America's Wild West era comes to an end.`, 800, `https://i.postimg.cc/NFyR33yJ/reddead2.jpg`, 0);
+    let product02 = new MyObjectConstructor(2, `Red Dead Redemption 2`, `Red Dead Redemption 2 is a western action-adventure game set in an open world environment and played from a third-person perspective, featuring single-player and online multiplayer. Relive the final years of the Outlaw in America's Wild West era comes to an end.`, 800, `https://i.postimg.cc/NFyR33yJ/reddead2.jpg`, 0);
 
     let product03 = new MyObjectConstructor(3, `Fallout 4`, `Bethesda Game Studios, the award-winning creators of Fallout 3 and The Elder Scrolls V: Skyrim, welcome you to the world of Fallout 4 – their most ambitious game ever. You are the Sole Survivor of Vault 111 searching for your missing son after a brazen kidnapping.`, 400, `https://i.postimg.cc/rm3FZmvH/fo4.jpg`, 0);
 
