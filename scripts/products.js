@@ -73,7 +73,7 @@ function displayProducts(productArray){
                         <img src='${item.prodImage}'>
                         <div class='container'>
                             <h2>${item.name}</h2>
-                            <p>${item.description}</p>
+                            <p id='cardDesc'>${item.description}</p>
                             <p>R${item.price}</p>
                         </div>
                         <button id='cartBtn' data-index='${index}' data-add>Add To Cart</button>
@@ -116,7 +116,7 @@ searchBtn.addEventListener("click", ()=>{
                         <img src='${item.prodImage}'>
                         <div class='container'>
                             <h2>${item.name}</h2>
-                            <p>${item.description}</p>
+                            <p id='cardDesc'>${item.description}</p>
                             <p>R${item.price}</p>
                         </div>
                         <button id='cartBtn' data-index='${index}' data-add>Add To Cart</button>
